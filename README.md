@@ -172,7 +172,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 2. Secure Aurora Identity & Access Gateway
 
-<img src="docs/screenshots/02_login_portal.jpg" alt="Login Portal" width="100%" />
+<img src="docs/screenshots/02_login_portal.png" alt="Login Portal" width="100%" />
 
 * **Route**: `/login`
 * **How It Works**:
@@ -202,7 +202,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 4. Autonomous AI Plant Insights Copilot
 
-<img src="docs/screenshots/04_ai_plant_insights.jpg" alt="AI Plant Insights" width="100%" />
+<img src="docs/screenshots/04_ai_plant_insights.png" alt="AI Plant Insights" width="100%" />
 
 * **Interface**: Floating & Embedded Copilot Modal
 * **How It Works**:
@@ -231,7 +231,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 6. High-Granularity Bottle Serialization & Tracking
 
-<img src="docs/screenshots/06_bottle_tracking.jpg" alt="Bottle Tracking" width="100%" />
+<img src="docs/screenshots/06_bottle_tracking.png" alt="Bottle Tracking" width="100%" />
 
 * **Route**: `/dashboard/bottle-tracking`
 * **How It Works**:
@@ -261,7 +261,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 8. Station 4: Automated Capping & Torque Operations
 
-<img src="docs/screenshots/08_capping_operations.jpg" alt="Capping Operations" width="100%" />
+<img src="docs/screenshots/08_capping_operations.png" alt="Capping Operations" width="100%" />
 
 * **Route**: `/dashboard/capping`
 * **How It Works**:
@@ -291,7 +291,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 10. Full-Fidelity Production History & Telemetry Logs
 
-<img src="docs/screenshots/10_production_history.jpg" alt="Production History" width="100%" />
+<img src="docs/screenshots/10_production_history.png" alt="Production History" width="100%" />
 
 * **Route**: `/dashboard/history`
 * **How It Works**:
@@ -590,15 +590,15 @@ Bottling Plant/
 ├── docs/                                # Technical Documentation & Visual Assets
 │   └── screenshots/                     # 12 Screenshots Provided by User
 │       ├── 01_landing_hero.jpg          # Three.js 3D Torii Gate Presentation Hero
-│       ├── 02_login_portal.jpg          # Aurora Glassmorphism Access Portal
+│       ├── 02_login_portal.png          # Aurora Glassmorphism Access Portal
 │       ├── 03_overview_dashboard.png    # SCADA Central Command Overview
-│       ├── 04_ai_plant_insights.jpg     # Autonomous Gemini AI Copilot Modal
+│       ├── 04_ai_plant_insights.png     # Autonomous Gemini AI Copilot Modal
 │       ├── 05_production_wave.png       # Production Wave & Batch Fulfillment
-│       ├── 06_bottle_tracking.jpg       # Bottle Serialization & Status Feed
+│       ├── 06_bottle_tracking.png       # Bottle Serialization & Status Feed
 │       ├── 07_quality_inspection.png    # Station 2 ISO 9001 Load-Cell Inspection
-│       ├── 08_capping_operations.jpg    # Station 4 Torque & Capping Operations
+│       ├── 08_capping_operations.png    # Station 4 Torque & Capping Operations
 │       ├── 09_packaging_line.png        # Station 5 3-Bottle Tray Packaging Line
-│       ├── 10_production_history.jpg    # Production Telemetry History (796 units)
+│       ├── 10_production_history.png    # Production Telemetry History (796 units)
 │       ├── 11_user_management.png       # 5-Tier RBAC Directory & Protected Owner
 │       └── 12_plant_reports.png         # Shift Summary & jsPDF Export Engine
 ├── bottling_plant_script.vbs            # Delta DIAView SCADA 100ms VBScript Sequencer
