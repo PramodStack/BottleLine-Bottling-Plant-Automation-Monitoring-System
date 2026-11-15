@@ -158,7 +158,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 1. Industrial Landing & Cinematic Presentation Hero
 
-![Landing Hero](docs/screenshots/01_landing_hero.jpg)
+<img src="docs/screenshots/01_landing_hero.jpg" alt="Landing Hero" width="100%" />
 
 * **Route**: `/` or `/kage`
 * **How It Works**:
@@ -172,7 +172,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 2. Secure Aurora Identity & Access Gateway
 
-![Login Portal](docs/screenshots/02_login_portal.jpg)
+<img src="docs/screenshots/02_login_portal.jpg" alt="Login Portal" width="100%" />
 
 * **Route**: `/login`
 * **How It Works**:
@@ -186,7 +186,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 3. SCADA Central Command Overview Dashboard
 
-![Overview Dashboard](docs/screenshots/03_overview_dashboard.png)
+<img src="docs/screenshots/03_overview_dashboard.png" alt="Overview Dashboard" width="100%" />
 
 * **Route**: `/dashboard`
 * **How It Works**:
@@ -202,7 +202,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 4. Autonomous AI Plant Insights Copilot
 
-![AI Plant Insights](docs/screenshots/04_ai_plant_insights.jpg)
+<img src="docs/screenshots/04_ai_plant_insights.jpg" alt="AI Plant Insights" width="100%" />
 
 * **Interface**: Floating & Embedded Copilot Modal
 * **How It Works**:
@@ -216,7 +216,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 5. Production Wave & Batch Quota Fulfillment
 
-![Production Wave](docs/screenshots/05_production_wave.png)
+<img src="docs/screenshots/05_production_wave.png" alt="Production Wave" width="100%" />
 
 * **Route**: `/dashboard/production`
 * **How It Works**:
@@ -231,7 +231,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 6. High-Granularity Bottle Serialization & Tracking
 
-![Bottle Tracking](docs/screenshots/06_bottle_tracking.jpg)
+<img src="docs/screenshots/06_bottle_tracking.jpg" alt="Bottle Tracking" width="100%" />
 
 * **Route**: `/dashboard/bottle-tracking`
 * **How It Works**:
@@ -246,7 +246,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 7. Station 2: Optical & Load-Cell Quality Inspection
 
-![Quality Inspection](docs/screenshots/07_quality_inspection.png)
+<img src="docs/screenshots/07_quality_inspection.png" alt="Quality Inspection" width="100%" />
 
 * **Route**: `/dashboard/inspection`
 * **How It Works**:
@@ -261,7 +261,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 8. Station 4: Automated Capping & Torque Operations
 
-![Capping Operations](docs/screenshots/08_capping_operations.jpg)
+<img src="docs/screenshots/08_capping_operations.jpg" alt="Capping Operations" width="100%" />
 
 * **Route**: `/dashboard/capping`
 * **How It Works**:
@@ -276,7 +276,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 9. Station 5: Automated 3-Bottle Tray Packaging Line
 
-![Packaging Line](docs/screenshots/09_packaging_line.png)
+<img src="docs/screenshots/09_packaging_line.png" alt="Packaging Line" width="100%" />
 
 * **Route**: `/dashboard/packaging`
 * **How It Works**:
@@ -291,7 +291,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 10. Full-Fidelity Production History & Telemetry Logs
 
-![Production History](docs/screenshots/10_production_history.jpg)
+<img src="docs/screenshots/10_production_history.jpg" alt="Production History" width="100%" />
 
 * **Route**: `/dashboard/history`
 * **How It Works**:
@@ -305,7 +305,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 11. Enterprise RBAC User Directory & Security Governance
 
-![User Management](docs/screenshots/11_user_management.png)
+<img src="docs/screenshots/11_user_management.png" alt="User Management" width="100%" />
 
 * **Route**: `/dashboard/users`
 * **How It Works**:
@@ -322,7 +322,7 @@ Below is a detailed visual tour of the 12 core interfaces comprising the PULSE B
 
 ### 12. Plant Reports, Defect Analytics & Automated PDF Engine
 
-![Plant Reports](docs/screenshots/12_plant_reports.png)
+<img src="docs/screenshots/12_plant_reports.png" alt="Plant Reports" width="100%" />
 
 * **Route**: `/dashboard/reports`
 * **How It Works**:
