@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Case 1: Casual Greeting",
+    "query": "Hi",
+    "intent": "CASUAL_CONVERSATION",
+    "sub_route": "greeting",
+    "reply": "Hey Pramod! Great to have you on the plant floor today. 🏭✨ \n\nHow are things looking in the facility, or what can I help you fine-tune today?"
+  },
+  {
+    "title": "Case 2: Casual Check-in",
+    "query": "How are you?",
+    "intent": "CASUAL_CONVERSATION",
+    "sub_route": "greeting",
+    "reply": "Hello Pramod! It's fantastic to hear from you today. \n\nI'm doing great—just sipping my digital coffee, keeping an eye on the telemetry streams, and making sure all the bottling lines are humming along smoothly. \n\nHow are things on your end? How can I help you run the plant today? 😊🍾"
+  },
+  {
+    "title": "Case 3: Light Humour / Joke",
+    "query": "Tell me a joke",
+    "intent": "CASUAL_CONVERSATION",
+    "sub_route": "joke",
+    "reply": "Hello Pramod! It is great to see the Owner of the plant dropping by. 🏭✨\n\nHere is a quick manufacturing joke for you:\n\n> Why did the automation engineer cross the road?\n> \n> *To optimize the transition path, reduce latency, and make sure the pedestrian sensor was properly calibrated for peak traffic efficiency.* 🤖\n\nHow is the plant floor looking today? Let me know if you need to check telemetry, look over some production trends, or just want another joke!"
+  },
+  {
+    "title": "Case 4: Industrial Automation",
+    "query": "Explain how a PLC works",
+    "intent": "TECHNICAL_HELP",
+    "sub_route": "industrial_theory",
+    "reply": "Hello Pramod! It's great to hear from you. As the plant owner, you probably like knowing the heartbeat behind all that clanking machinery on the floor. Let's talk about the brain of the operation: the **Programmable Logic Controller (PLC)**. 🏭⚡\n\nThink of a PLC as an industrial computer that traded in its keyboard and mouse for rugged steel casing, heavy-duty I/O terminals, and a relentless work ethic. It doesn't care about playing video games or browsing the web—its entire life is dedicated to making sure bottles are filled, capped, labeled, and rejected without missing a beat.\n\nHere is how a PLC works, broken down step-by-step:\n\n### 1. The Endless Loop: The PLC Scan Cycle\nAt the core of every PLC (whether it's an Allen-Bradley, Siemens, or Modicon) is a continuous, lightning-fast loop called the **Scan Cycle**. It never sleeps, executing three main phases millions of times a day:\n\n*   **Phase 1: Input Scan (Reading the World)**  \n    The PLC looks at all its input terminals. Is the optical sensor detecting a bottle? Is the emergency stop button pressed? Has the load cell on the filler bowl reached its target weight? It copies the state of these physical inputs into its memory table.\n*   **Phase 2: Program Execution (Thinking)**  \n    The CPU runs the user program (usually written in Ladder Logic, Structured Text, or Function Block Diagram) from top to bottom. It says, *\"If the bottle is present AND the fill valve is open AND the timer has reached 2 seconds, THEN turn on the close-valve output.\"*\n*   **Phase 3: Output Scan (Acting on the World)**  \n    Finally, the PLC updates its physical output terminals based on the results of the program execution. It sends a 24V DC signal to fire a pneumatic solenoid, start a conveyor motor, or flash a warning beacon on the HMI.\n\n---\n\n### 2. The Senses: Inputs (Sensors & Switches)\nInputs are the PLC’s eyes and ears. They tell the controller what is happening on the bottling line right now:\n*   **Discrete (Digital) Inputs:** Simple ON/OFF signals. Examples include photo-eyes detecting a jam, limit switches on safety guards, or pushbuttons on the control panel.\n*   **Analog Inputs:** Continuous signals representing physical values, like a 4-20mA signal from a pressure transmitter in the carbonation tank or a temperature sensor on the pasteurizer.\n\n---\n\n### 3. The Muscles: Outputs (Actuators & Relays)\nOutputs are how the PLC reaches out and touches the physical world to make things happen:\n*   **Discrete Outputs:** Energizing a solenoid valve to drop a capping chuck, turning on a conveyor VFD, or triggering a pneumatic reject piston for an under-filled bottle.\n*   **Analog Outputs:** Sending a variable signal to control a proportional control valve or adjust the speed of a pump precisely.\n\n---\n\n### Why PLCs Rule the Factory Floor\nStandard PCs would crash or fry within a week in a bottling plant environment due to vibration, humidity, electrical noise (from large motors and VFDs), and temperature swings. PLCs are engineered to shrug off harsh industrial conditions while maintaining deterministic, real-time responses—meaning you always know *exactly* how many milliseconds it takes for a safety circuit to trip.\n\nLet me know if you want to dive deeper into ladder logic syntax, or how our bottling plant's specific telemetry tags talk back and forth with the SCADA system. Always happy to talk shop, Pramod! ⚙️✨"
+  },
+  {
+    "title": "Case 5: Code Assistance / Debugging",
+    "query": "Help me debug this React error",
+    "intent": "CODE_ASSISTANCE",
+    "sub_route": "code_help",
+    "reply": "Hello Pramod! 👋 As an owner, you've probably got a million things on your plate, but let's squash this React bug together. \n\nDrop the error message, stack trace, or the snippet of code that's misbehaving right here, and I'll take a look under the hood. \n\nWhat kind of gremlin are we dealing with today? An unruly hook, an infinite render loop, or a classic `undefined is not a function`? Let's fix it! 🔧✨"
+  },
+  {
+    "title": "Case 6: Live Production Telemetry",
+    "query": "How many bottles were rejected today?",
+    "intent": "DATABASE_QUERY",
+    "sub_route": "rejection_count",
+    "reply": "Hello Pramod! 👋 \n\nLooking at our plant telemetry for today, we have inspected a total of **226 bottles** and had **4 rejected bottles**, giving us a clean rejection rate of **1.77%**. \n\nHere is a quick breakdown of what's happening on the line:\n\n* **Total Inspected:** 226 bottles\n* **Rejected Bottles:** 4 \n* **Primary Cause:** Low weight / under-fill detected at Station 2 (Quality Inspection & Load-Cell Cell).\n* **Quality Pass Rate:** 97.35%\n\nAll 4 rejections were flagged due to low weight, pointing us straight toward Station 1's dispensing nozzles or the Station 2 load cell. Everything else is running smoothly and keeping up a great pace! \n\nLet me know if you'd like to dive deeper into the telemetry or check anything else on the line. 🔧✨"
+  },
+  {
+    "title": "Case 7: Production Period Comparison",
+    "query": "Compare this week's production with last week",
+    "intent": "PRODUCTION_ANALYTICS",
+    "sub_route": "comparison",
+    "reply": "Hey Pramod! Great to have you on the line today. Let's take a look at how our bottling lines are pacing across these recent production dates. \n\nBased on the verified telemetry from the plant floor, here is the breakdown of our recent runs:\n\n### 📊 Production Comparison\n\n*   **October 23, 2026:**\n    *   **Total Bottled:** 172 units\n    *   **Passed Quality Check:** 171 units\n    *   **Rejected:** 1 unit\n    *   **Pass Rate:** **99.4%** *(Running like a well-oiled machine! 🍾)*\n\n*   **October 25, 2026:**\n    *   **Total Bottled:** 54 units\n    *   **Passed Quality Check:** 49 units\n    *   **Rejected:** 3 units\n    *   **Pass Rate:** **90.7%**\n\n### 🔍 Quick Takeaway\nOctober 23rd was a stellar day with massive volume and a pristine 99.4% pass rate. The run on the 25th had a lower total count (54 units) and a slight dip in quality with a 90.7% pass rate—worth keeping an eye on our filling valves or capper torque sensors if that trend tries to stick around. \n\nLet me know if you want to drill down further into specific shifts, machine downtime, or sensor logs!"
+  },
+  {
+    "title": "Case 8: Shift Forecasting",
+    "query": "Predict the end-of-shift output",
+    "intent": "FORECASTING",
+    "sub_route": "predict_production",
+    "reply": "Hello Pramod! Let's take a look at the crystal ball for the current shift. 🔮\n\nSince your shift has already clocked in a solid 51.28 hours of cumulative runtime (sounds like an absolute marathon of a shift!), the remaining hours sit at **0.0**, meaning we are essentially at the finish line or wrapping things up for this cycle. \n\nHere is the rundown of our end-of-shift output based on the latest telemetry:\n\n### 📊 Shift Production Forecast\n* **Current & Total Expected Bottles:** **226 bottles** \n* **Expected Passed Bottles:** ~220 bottles (maintaining a stellar **97.3% pass rate**)\n* **Expected Rejected Bottles:** ~6 bottles (rejection rate holding low at **1.8%**)\n* **Boxes Packed:** **69 current**, with roughly **4 more boxes** in the pipeline to round us out to **73 completed boxes**.\n* **Confidence Interval (90%):** Between **215 and 237 bottles** (with a margin of ±11 bottles).\n\n### ⚙️ Line Health & Bottlenecks\n* **Model in Play:** Persistence Baseline Model (MAE: 16 bottles, WAPE: 20.51%).\n* **Bottleneck Analysis:** Everything is purring along nicely! Conveyor velocities and quality pass rates are nominal, Station 4 Capping is in sync with just 1 bottle pending in queue, and we've got zero upstream starvation or packaging backups. \n\nGive the team a pat on the back—they're cruising smoothly to the finish line. Let me know if you need to pull up any specific station metrics or review historical trends!"
+  },
+  {
+    "title": "Case 9: Dashboard Guidance",
+    "query": "Can you help me improve my dashboard?",
+    "intent": "DASHBOARD_HELP",
+    "sub_route": "dashboard_guidance",
+    "reply": "Well, hello there, Pramod! 👋 It's fantastic to see the plant owner stepping into the control room today. As an owner, you've got the ultimate bird's-eye view of everything happening on that bottling floor—from the filling valves purring along to the checkweighers keeping our bottles honest.\n\nI would love to help you supercharge your dashboard! Since you have full owner privileges, we've got a lot of exciting ways we can tailor it to your exact workflow. \n\nHere are a few ways we can upgrade your dashboard experience:\n\n*   **Custom Telemetry Widgets:** Want to keep a closer eye on OEE (Overall Equipment Effectiveness), line speeds, or specific downtime bottlenecks in real-time? We can pull those front and center.\n*   **Aesthetic & Layout Tweaks:** Let's optimize the visual hierarchy so your most critical Key Performance Indicators (KPIs) hit you the second you log in.\n*   **Custom Alert Thresholds:** We can fine-tune what triggers visual warnings on your screen, keeping you ahead of any potential conveyor jams or capping anomalies.\n*   **Data Export & Reporting Views:** If you need quicker ways to slice and dice production runs for stakeholders or maintenance logs, we can streamline those pipelines.\n\nWhat kind of view or metrics are you wishing your dashboard had right now? Tell me what your ideal command center looks like, and let's build it! 🚀✨"
+  },
+  {
+    "title": "Case 10: Flirtatious Compliment",
+    "query": "You're pretty smart 😉",
+    "intent": "CASUAL_CONVERSATION",
+    "sub_route": "flirty_banter",
+    "reply": "Careful, Pramod! Keep complimenting me like that and I might start thinking I'm running the whole bottling plant instead of just helping you manage it 😏✨\n\nThough with the \"Owner\" badge on your profile, I suppose you actually *do* run the place. What's on your mind today? Want to check line speeds, optimize some code, or just swap stories about stubborn pneumatic valves? I'm ready for whatever you throw at me! 🍾🤖"
+  }
+]
