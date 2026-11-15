@@ -520,40 +520,6 @@ erDiagram
 
 ---
 
-## 💡 Architectural Deep Dives & Interview Q&A
-
-This section provides technical interviewers with direct insight into the candidate's engineering decisions and trade-offs.
-
-### Q1: How did you prevent database locking during high-frequency 100ms SCADA writes?
-> **Answer**: In industrial automation, a PLC cannot pause its physical scan cycle to wait for a relational database write without risking line collisions. We resolved this through a **two-tier staged architecture**:
-> 1. In Delta DIAView, the VBScript sequencer does not issue synchronous SQL statements. It uses state registers (`dbNbStage`, `dbInspStage`) to separate event detection from write execution, applying a 200ms execution throttle and exponential backoff retry logic.
-> 2. On the MySQL side, `production_log` insertions are append-only time-series rows indexed on `(bottle_number, created_at)`. High-level dashboard counters are stored in a dedicated single-row accumulator table (`production_summary`), eliminating costly table-wide `COUNT(*)` queries on active lines.
-
-### Q2: Why did you select Argon2id over bcrypt or PBKDF2?
-> **Answer**: While bcrypt remains standard for web applications, **Argon2id** is the state of the art in modern cryptography. It combines Argon2d's resistance to GPU/ASIC brute-force cracking (memory-hard computational requirements) with Argon2i's resistance to side-channel cache-timing attacks. For an industrial SCADA platform operating in zero-trust operational technology (OT) environments, Argon2id provides superior longevity against adversarial credential cracking.
-
-### Q3: How do you prevent the Google Gemini AI from hallucinating factory metrics?
-> **Answer**: We completely decoupled the LLM from raw numeric estimation by adopting a **ReAct Tool-Calling Pattern**:
-> 1. The system prompt restricts Gemini to functioning as an industrial analytical engine.
-> 2. Instead of generating statistics from text context, the model is bound to 12 deterministic Python functions (`ai_tools.py`).
-> 3. When an operator asks *"Why was Bottle #736 rejected?"*, Gemini outputs a structured tool call: `get_bottle_details(bottle_number=736)`.
-> 4. The backend executes the parameterized query against MySQL and feeds the exact JSON result back to Gemini. The model then formats the verified factual data into natural language, achieving 100% telemetry grounding.
-
-### Q4: Why did you choose an Apple/macOS glassmorphism aesthetic for an industrial SCADA tool?
-> **Answer**: Traditional SCADA software is notorious for causing **alarm fatigue** and cognitive overload. Operators working 12-hour shifts are bombarded by harsh high-saturation neon grids.
-> By implementing a macOS-inspired dark glassmorphism system:
-> * **Visual Hierarchy**: Frosted z-index layers (`backdrop-filter: blur(16px)`) create natural spatial grouping without cluttering borders.
-> * **Ergonomics**: Deep navy backgrounds (`#0a0f1d`) drastically reduce luminance eye strain in dim control rooms.
-> * **Pacing**: High-saturation colors are strictly reserved for actionable events (Emerald for ISO compliance, Ruby for pneumatic diverter trips), allowing operators to detect anomalies instantaneously.
-
-### Q5: How is client-side state synchronized with fast-moving conveyor data?
-> **Answer**: The React frontend uses a decoupled polling and rendering pipeline:
-> * `PlantDataContext.tsx` polls lightweight delta endpoints at configured intervals.
-> * Recharts visualizations and animated counters (`AnimatedNumber.tsx`) utilize CSS and Framer Motion spring physics to interpolate between telemetry updates smoothly without triggering expensive full-page DOM re-renders.
-> * Operator presence uses an in-memory 30-second write throttle on the backend, preventing hundreds of active dashboard tabs from degrading database I/O.
-
----
-
 ## 📁 Project Directory & Codebase Anatomy
 
 ```
